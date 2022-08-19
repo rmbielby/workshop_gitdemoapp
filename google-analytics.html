@@ -1,0 +1,28 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z967JJVQQX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z967JJVQQX');
+  
+  $(document).on('change', 'select#dataset', function(e) {
+    gtag('event', 'change', {'event_category' : 'choose dataset',
+    'event_label' : document.querySelector('select#dataset').value
+    });
+  });
+  
+  $(document).on('click', '#navbar', function(e) {
+    gtag('event', 'navbar', {'event_category' : 'navbar click',
+    'event_label' : document.querySelector('#tab-pane active').value
+    });
+  });
+  
+  $(document).on('click', '#app_content', function(e) {
+    gtag('event', 'app content', {'event_category' : 'navbar click'
+    });
+  });
+  
+</script>
+      
